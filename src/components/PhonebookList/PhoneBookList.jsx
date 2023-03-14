@@ -2,7 +2,7 @@ import css from '../Phonebook/Phonebook.module.css';
 
 import PropTypes from 'prop-types';
 
-const PhoneBookList = ({ items, onDelete }) => {
+const PhoneBookList = ({ items = [], onDelete }) => {
   const elements = items.map(({ id, name, number }) => (
     <li className={css.item} key={id}>
       {name}: {number}
